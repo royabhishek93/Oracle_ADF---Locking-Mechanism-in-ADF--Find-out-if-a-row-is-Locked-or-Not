@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.abhishek.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/Search.jsff" usageId="com_abhishek_view_SearchPageDef"/>
+    <page path="/Details.jsff" usageId="com_abhishek_view_DetailsPageDef"/>
+    <page path="/homePage.jsf" usageId="com_abhishek_view_homePagePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_abhishek_view_SearchPageDef" path="com.abhishek.view.pageDefs.SearchPageDef"/>
+    <page id="com_abhishek_view_DetailsPageDef" path="com.abhishek.view.pageDefs.DetailsPageDef"/>
+    <page id="com_abhishek_view_homePagePageDef" path="com.abhishek.view.pageDefs.homePagePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.abhishek.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
